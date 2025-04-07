@@ -10,6 +10,17 @@
     <div class="container">
         <h1>EventLand</h1>
         
+        <!-- Debug Controls -->
+        <div class="debug-controls">
+            <button id="toggleDebugMode">Enable Debug Mode</button>
+            <div id="stepControls" class="hidden">
+                <button id="stepOver">Step Over</button>
+                <button id="stepInto">Step Into</button>
+                <button id="continue">Continue</button>
+                <span id="currentLine"></span>
+            </div>
+        </div>
+        
         <div class="controls">
             <button id="addEventBtn">Add Event</button>
             <button id="trackClicksBtn">Track Clicks</button>
@@ -28,6 +39,31 @@
         <div class="event-log">
             <h2>Event Log</h2>
             <div id="logContainer"></div>
+        </div>
+
+        <!-- Debug Panel -->
+        <div class="debug-panel">
+            <h2>Debug Information</h2>
+            <div class="debug-section">
+                <h3>Scope Chain</h3>
+                <div id="scopeChainDisplay"></div>
+            </div>
+            <div class="debug-section">
+                <h3>this Context</h3>
+                <div id="thisContextDisplay"></div>
+            </div>
+            <div class="debug-section">
+                <h3>Event Counter</h3>
+                <div id="eventCounterDisplay"></div>
+            </div>
+            <div class="debug-section">
+                <h3>Console Output</h3>
+                <div id="consoleOutput"></div>
+            </div>
+            <div class="debug-section">
+                <h3>Call Stack</h3>
+                <div id="callStackDisplay"></div>
+            </div>
         </div>
     </div>
 

@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -61,6 +61,7 @@ select {
     padding: 15px;
     border-radius: 4px;
     background-color: #f9f9f9;
+    margin-bottom: 20px;
 }
 
 #logContainer {
@@ -75,4 +76,163 @@ select {
     background-color: white;
     border-radius: 4px;
     border-left: 3px solid #4CAF50;
+}
+
+/* Debug Panel Styles */
+.debug-panel {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+}
+
+.debug-section {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 3px solid #2196F3;
+}
+
+.debug-section h3 {
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+#scopeChainDisplay, #thisContextDisplay, #eventCounterDisplay, #consoleOutput {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Highlight different scope levels */
+.scope-level {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+.scope-global {
+    background-color: #E3F2FD;
+}
+
+.scope-function {
+    background-color: #E8F5E9;
+}
+
+.scope-block {
+    background-color: #FFF3E0;
+}
+
+/* Highlight different this contexts */
+.this-context {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+.this-global {
+    background-color: #FFEBEE;
+}
+
+.this-object {
+    background-color: #E8F5E9;
+}
+
+.this-bound {
+    background-color: #E3F2FD;
+}
+
+/* Debug Controls */
+.debug-controls {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#stepControls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#stepControls.hidden {
+    display: none;
+}
+
+#currentLine {
+    margin-left: 20px;
+    font-family: monospace;
+    color: #666;
+}
+
+/* Call Stack Display */
+#callStackDisplay {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.call-stack-entry {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+    background-color: #fff;
+    border-left: 3px solid #2196F3;
+}
+
+.call-stack-entry.active {
+    background-color: #E3F2FD;
+    border-left: 3px solid #1976D2;
+}
+
+/* Debug Mode Styles */
+.debug-mode .container {
+    border: 2px solid #2196F3;
+}
+
+/* Remove the button disabling styles */
+.debug-mode .controls button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.debug-mode .controls button.active {
+    background-color: #2196F3;
+}
+
+/* Add highlight for active button */
+.debug-mode .controls button:active {
+    background-color: #1976D2;
+    transform: scale(0.98);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
 } 
